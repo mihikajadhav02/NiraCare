@@ -2,6 +2,14 @@
 
 **Kaggle Competition:** Agents Intensive – Capstone Project, Agents for Good track
 
+## My Inspiration
+
+As a woman myself, I've experienced firsthand the frustration of trying to communicate health concerns during doctor visits. I've sat in exam rooms, my mind going blank when asked to describe symptoms I've been experiencing for weeks. I've watched friends and family members struggle to articulate their concerns—especially around reproductive health, menstrual cycles, and chronic conditions—only to leave appointments feeling unheard or misunderstood.
+
+The women around me have shared countless stories: forgetting crucial details in the moment, feeling dismissed when symptoms seem "too vague," struggling to find the right medical terminology, and leaving appointments with incomplete documentation that doesn't capture the full picture of what they're experiencing.
+
+This project is deeply personal. It's born from my own experiences and the experiences of women I care about. NiraCare is my attempt to bridge that communication gap—to give women a tool that helps them prepare, organize their thoughts, and ensure their voices are heard clearly in healthcare settings. It's not about replacing the doctor-patient relationship; it's about empowering women to communicate more effectively so they can receive the care they deserve.
+
 ## One-Line Description
 
 NiraCare is a multi-agent AI assistant that converts messy, emotional symptom descriptions from women into a clear, structured, doctor-ready visit note. It is a communication helper, **NOT a diagnostic tool**.
@@ -68,8 +76,6 @@ NiraCare/
 ├── niracare_agents.py           # All 5 agent definitions using Gemini SDK
 ├── niracare_pipeline.py         # Orchestration and session management
 ├── run_interactive.py           # Interactive terminal interface
-├── kaggle_notebook_stub.py      # Code cells for Kaggle Notebook
-├── examples.txt                 # Sample symptom descriptions for testing
 ├── requirements.txt             # Python dependencies
 ├── WRITEUP.md                   # Competition writeup
 └── README.md                    # This file
@@ -135,16 +141,11 @@ print(session.eval_result)         # Quality evaluation
    - Go to Kaggle notebook settings → Environment variables
    - Add `GOOGLE_API_KEY` with your API key value
 
-3. **Copy Code Cells:**
-   - Open `kaggle_notebook_stub.py`
-   - Copy each "Cell N:" section into separate notebook cells
-   - Run cells sequentially
-
-4. **Run Example:**
+3. **Run Example:**
    ```python
-   from niracare_pipeline import run_niracare_demo
+   from niracare_pipeline import run_niracare_with_user_answers
    
-   session = run_niracare_demo("Your symptom description here...")
+   session = run_niracare_with_user_answers("Your symptom description here...")
    ```
 
 ## How It Works
